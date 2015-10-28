@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "TwitterStatus.h"
+#import "SWTableViewCell.h"
 
-@interface TwitterStatusCell : UITableViewCell
+@interface TwitterStatusCell : SWTableViewCell
 
 @property(nonatomic, weak) IBOutlet UIImageView *userProfilePicture;
 @property(nonatomic, weak) IBOutlet UILabel *userNameLabel;

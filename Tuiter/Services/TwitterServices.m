@@ -8,6 +8,7 @@
 
 #import "TwitterServices.h"
 #import "TwitterStatus.h"
+#import "TwitterTrend.h"
 
 @implementation TwitterServices
 
@@ -23,7 +24,8 @@
 
 - (void)searchTweets:(NSString *) search callback:(void (^)(BOOL success, NSArray *twitterStatuses))callback {
     
-    [self.manager GET:[NSString stringWithFormat:@"/1.1/search/tweets.json?q=%@", search] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
+    [self.manager GET:[[NSString stringWithFormat:@"/1.1/search/tweets.json?q=%@", search] stringByAddingPercentEscapesUsingEncoding:
+                       NSUTF8StringEncoding] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
      {
          // Success
          NSLog(@"Success: %@", responseObject);
@@ -47,6 +49,32 @@
      }];
 }
 
+- (void)getTrends:(NSString *)place callback:(void (^)(BOOL success, NSArray *twitterTrends))callback {
+    
+    [self.manager GET:[[NSString stringWithFormat:@"1.1/trends/place.json?id=%@", place] stringByAddingPercentEscapesUsingEncoding:
+                       NSUTF8StringEncoding] parameters:nil success:^(NSURLSessionDataTask *task, id responseObject)
+     {
+         // Success
+         NSLog(@"Success: %@", responseObject);
+         
+         id trends = [[responseObject objectAtIndex:0] objectForKey:@"trends"];
+         if (trends != nil) {
+             NSMutableArray *twitterTrends = [NSMutableArray array];
+             for (id trend in trends) {
+                 [twitterTrends addObject:[TwitterTrend fromDictionary:trend]];
+             }
+             callback(YES, twitterTrends);
+             return;
+         }
+         
+         callback(NO, nil);
+     }failure:^(NSURLSessionDataTask *task, NSError *error)
+     {
+         // Failure
+         NSLog(@"Failure: %@", error);
+         callback(NO, nil);
+     }];
+}
 
 
 @end

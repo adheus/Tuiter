@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "TwitterServices.h"
-@interface ViewController : UIViewController <UITextFieldDelegate>
+@interface ViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, weak) IBOutlet UITextField *searchField;
+
+
+@property(nonatomic, weak) IBOutlet UITableView *recentSearchesTableView;
+@property(nonatomic, weak) IBOutlet UITableView *trendingNowTableView;
+
 @property(nonatomic, retain) TwitterServices *twitterServices;
+
+@property(nonatomic, retain) NSArray *lastSearchedTerms;
+@property(nonatomic, retain) NSArray *lastRequestedTrending;
 
 @end
 

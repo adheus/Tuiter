@@ -5,6 +5,7 @@
 
 target 'Tuiter' do
 pod 'AFNetworking', '~> 2.6'
+pod 'SWTableViewCell', '~> 0.3.7'
 end
 
 target 'TuiterTests' do

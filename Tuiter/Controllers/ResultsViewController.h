@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
 
-@interface ResultsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ResultsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SWTableViewCellDelegate>
 
 @property (nonatomic, weak) UITableView *resultsTableView;
 @property (nonatomic, retain) NSArray *results;

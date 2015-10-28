@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		08CEAF66EFF14D72A22002C8 /* libPods-Tuiter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E21E53FD3C5D0CCB14315E /* libPods-Tuiter.a */; };
+		1B08DDA31BE030A7008F982A /* SearchDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDA21BE030A7008F982A /* SearchDAO.m */; };
+		1B08DDA61BE03906008F982A /* SimpleItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDA51BE03906008F982A /* SimpleItemCell.m */; };
+		1B08DDA91BE03F32008F982A /* TwitterTrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDA81BE03F32008F982A /* TwitterTrend.m */; };
 		1BAE52201BDEF67600262B93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE521F1BDEF67600262B93 /* main.m */; };
 		1BAE52231BDEF67600262B93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE52221BDEF67600262B93 /* AppDelegate.m */; };
 		1BAE52261BDEF67600262B93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE52251BDEF67600262B93 /* ViewController.m */; };
@@ -46,6 +49,12 @@
 
 /* Begin PBXFileReference section */
 		04FEFFA6532F672B0F447A94 /* Pods-Tuiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tuiter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tuiter/Pods-Tuiter.debug.xcconfig"; sourceTree = "<group>"; };
+		1B08DDA11BE030A7008F982A /* SearchDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchDAO.h; path = DAO/SearchDAO.h; sourceTree = "<group>"; };
+		1B08DDA21BE030A7008F982A /* SearchDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchDAO.m; path = DAO/SearchDAO.m; sourceTree = "<group>"; };
+		1B08DDA41BE03906008F982A /* SimpleItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleItemCell.h; path = Utils/UI/SimpleItemCell.h; sourceTree = "<group>"; };
+		1B08DDA51BE03906008F982A /* SimpleItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleItemCell.m; path = Utils/UI/SimpleItemCell.m; sourceTree = "<group>"; };
+		1B08DDA71BE03F32008F982A /* TwitterTrend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterTrend.h; path = Models/TwitterTrend.h; sourceTree = "<group>"; };
+		1B08DDA81BE03F32008F982A /* TwitterTrend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterTrend.m; path = Models/TwitterTrend.m; sourceTree = "<group>"; };
 		1BAE521B1BDEF67600262B93 /* Tuiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BAE521F1BDEF67600262B93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BAE52211BDEF67600262B93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B08DDA01BE03083008F982A /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				1B08DDA11BE030A7008F982A /* SearchDAO.h */,
+				1B08DDA21BE030A7008F982A /* SearchDAO.m */,
+			);
+			name = DAO;
+			sourceTree = "<group>";
+		};
 		1BAE52121BDEF67600262B93 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +152,7 @@
 		1BAE521D1BDEF67600262B93 /* Tuiter */ = {
 			isa = PBXGroup;
 			children = (
+				1B08DDA01BE03083008F982A /* DAO */,
 				1BAE52651BDF1F0C00262B93 /* Utils */,
 				1BAE525E1BDF18A400262B93 /* Models */,
 				1BAE526D1BDF2F8700262B93 /* Controllers */,
@@ -196,6 +215,8 @@
 				1BAE52601BDF18BC00262B93 /* TwitterStatus.m */,
 				1BAE52621BDF18D900262B93 /* TwitterUser.h */,
 				1BAE52631BDF18D900262B93 /* TwitterUser.m */,
+				1B08DDA71BE03F32008F982A /* TwitterTrend.h */,
+				1B08DDA81BE03F32008F982A /* TwitterTrend.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -217,6 +238,8 @@
 				1BAE526B1BDF2F5100262B93 /* TwitterStatusCell.m */,
 				1BAE52711BDF316100262B93 /* CircularImageView.h */,
 				1BAE52721BDF316100262B93 /* CircularImageView.m */,
+				1B08DDA41BE03906008F982A /* SimpleItemCell.h */,
+				1B08DDA51BE03906008F982A /* SimpleItemCell.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -429,9 +452,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B08DDA61BE03906008F982A /* SimpleItemCell.m in Sources */,
+				1B08DDA31BE030A7008F982A /* SearchDAO.m in Sources */,
 				1BAE522C1BDEF67600262B93 /* Tuiter.xcdatamodeld in Sources */,
 				1BAE525D1BDF0AB600262B93 /* AFTwitterSessionManager.m in Sources */,
 				1BAE52641BDF18D900262B93 /* TwitterUser.m in Sources */,
+				1B08DDA91BE03F32008F982A /* TwitterTrend.m in Sources */,
 				1BAE526C1BDF2F5100262B93 /* TwitterStatusCell.m in Sources */,
 				1BAE52261BDEF67600262B93 /* ViewController.m in Sources */,
 				1BAE52701BDF2FBD00262B93 /* ResultsViewController.m in Sources */,

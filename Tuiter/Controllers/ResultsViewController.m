@@ -18,7 +18,7 @@
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.37 green:0.62 blue:0.79 alpha:1.0];
     
     
-    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"SearchIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(close)];
+    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(close)];
     closeButton.tintColor = [UIColor whiteColor];
     self.navigationItem.leftBarButtonItem = closeButton;
 
@@ -42,9 +42,80 @@
         cell = [[TwitterStatusCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:statusTableViewCellIdentifier];
     }
     
+    cell.leftUtilityButtons = [self leftButtons];
+    cell.delegate = self;
+    
     [cell setTwitterStatus:[self.results objectAtIndex:indexPath.row]];
     
     return cell;
+}
+
+
+- (NSArray *)leftButtons
+{
+    NSMutableArray *leftUtilityButtons = [NSMutableArray new];
+    
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:0.37 green:0.62 blue:0.79 alpha:1.0] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:0.37 green:0.62 blue:0.79 alpha:1.0] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:0.37 green:0.62 blue:0.79 alpha:1.0] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:[UIColor colorWithRed:0.37 green:0.62 blue:0.79 alpha:1.0] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
+    
+    return leftUtilityButtons;
+}
+
+
+-(void) share:(NSString *) textToShare sourceView:(UIView *)sourceView {
+    UIActivityViewController *vc = [[UIActivityViewController alloc] initWithActivityItems:[NSArray arrayWithObjects:textToShare, nil] applicationActivities:nil];
+    vc.excludedActivityTypes = @[
+                                 UIActivityTypePostToWeibo,
+                                 UIActivityTypePrint,
+                                 UIActivityTypeCopyToPasteboard,
+                                 UIActivityTypeAssignToContact,
+                                 UIActivityTypeSaveToCameraRoll,
+                                 UIActivityTypeAddToReadingList,
+                                 UIActivityTypePostToFlickr,
+                                 UIActivityTypePostToVimeo,
+                                 UIActivityTypePostToTencentWeibo,
+                                 UIActivityTypeAirDrop
+                                 ];
+    if ( [vc respondsToSelector:@selector(popoverPresentationController)] ) {
+        vc.popoverPresentationController.sourceView = sourceView;
+    }
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+
+
+#pragma mark - SWTableViewDelegate
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
+    ((UIButton *)[cell.leftUtilityButtons objectAtIndex:index]).selected = !((UIButton *)[cell.leftUtilityButtons objectAtIndex:index]).selected;
+    switch (index) {
+        case 0:
+            NSLog(@"1 button was pressed");
+            [self share: ((TwitterStatusCell *)cell).statusTextLabel.text sourceView:((UIButton *)[cell.leftUtilityButtons objectAtIndex:index])];
+            break;
+        case 1:
+            NSLog(@"2 button was pressed");
+            break;
+        case 2:
+            NSLog(@"3 button was pressed");
+            break;
+        case 3:
+            NSLog(@"4 button was pressed");
+        default:
+            break;
+    }
+}
+
+// prevent multiple cells from showing utilty buttons simultaneously
+- (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell {
+    return YES;
+}
+
+// prevent cell(s) from displaying left/right utility buttons
+- (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state {
+    return state == kCellStateLeft;
 }
 
 @end

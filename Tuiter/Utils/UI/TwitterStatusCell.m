@@ -16,6 +16,7 @@
     self.userNameLabel.text = status.user.name;
     self.statusTextLabel.text = status.text;
     
+    self.userProfilePicture.image = [UIImage imageNamed:@"TwitterLogo"];
     [self getPictureOnBackground:status.user.profileImageURL];
 }
 

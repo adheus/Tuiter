@@ -15,4 +15,5 @@
 @property(nonatomic) NSString  *bearerToken;
 
 - (void)searchTweets:(NSString *) search callback:(void (^)(BOOL success, NSArray *twitterStatuses))callback;
+- (void)getTrends:(NSString *)place callback:(void (^)(BOOL success, NSArray *twitterTrends))callback;
 @end

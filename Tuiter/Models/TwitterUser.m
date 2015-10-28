@@ -13,7 +13,7 @@
 +(TwitterUser *) fromDictionary:(id) dictionary {
     TwitterUser *user = [[TwitterUser alloc] init];
     user.name = [dictionary objectForKey:@"name"];
-    user.profileImageURL = [dictionary objectForKey:@"profile_image_url_https"];
+    user.profileImageURL = [dictionary objectForKey:@"profile_image_url"];
     
     return user;
 }

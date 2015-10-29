@@ -11,10 +11,11 @@
 		1B08DDA31BE030A7008F982A /* SearchDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDA21BE030A7008F982A /* SearchDAO.m */; };
 		1B08DDA61BE03906008F982A /* SimpleItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDA51BE03906008F982A /* SimpleItemCell.m */; };
 		1B08DDA91BE03F32008F982A /* TwitterTrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDA81BE03F32008F982A /* TwitterTrend.m */; };
+		1B08DDB71BE19D79008F982A /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B08DDB91BE19D79008F982A /* iPhone.storyboard */; };
 		1BAE52201BDEF67600262B93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE521F1BDEF67600262B93 /* main.m */; };
 		1BAE52231BDEF67600262B93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE52221BDEF67600262B93 /* AppDelegate.m */; };
 		1BAE52261BDEF67600262B93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE52251BDEF67600262B93 /* ViewController.m */; };
-		1BAE52291BDEF67600262B93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BAE52271BDEF67600262B93 /* Main.storyboard */; };
+		1BAE52291BDEF67600262B93 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BAE52271BDEF67600262B93 /* iPad.storyboard */; };
 		1BAE522C1BDEF67600262B93 /* Tuiter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE522A1BDEF67600262B93 /* Tuiter.xcdatamodeld */; };
 		1BAE522E1BDEF67600262B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BAE522D1BDEF67600262B93 /* Assets.xcassets */; };
 		1BAE52311BDEF67600262B93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BAE522F1BDEF67600262B93 /* LaunchScreen.storyboard */; };
@@ -55,13 +56,16 @@
 		1B08DDA51BE03906008F982A /* SimpleItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleItemCell.m; path = Utils/UI/SimpleItemCell.m; sourceTree = "<group>"; };
 		1B08DDA71BE03F32008F982A /* TwitterTrend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterTrend.h; path = Models/TwitterTrend.h; sourceTree = "<group>"; };
 		1B08DDA81BE03F32008F982A /* TwitterTrend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterTrend.m; path = Models/TwitterTrend.m; sourceTree = "<group>"; };
+		1B08DDAD1BE19C19008F982A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/iPad.strings"; sourceTree = "<group>"; };
+		1B08DDB81BE19D79008F982A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhone.storyboard; sourceTree = "<group>"; };
+		1B08DDBB1BE19D86008F982A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/iPhone.strings"; sourceTree = "<group>"; };
 		1BAE521B1BDEF67600262B93 /* Tuiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BAE521F1BDEF67600262B93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BAE52211BDEF67600262B93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BAE52221BDEF67600262B93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1BAE52241BDEF67600262B93 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1BAE52251BDEF67600262B93 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1BAE52281BDEF67600262B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BAE52281BDEF67600262B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPad.storyboard; sourceTree = "<group>"; };
 		1BAE522B1BDEF67600262B93 /* Tuiter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tuiter.xcdatamodel; sourceTree = "<group>"; };
 		1BAE522D1BDEF67600262B93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BAE52301BDEF67600262B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -161,7 +165,8 @@
 				1BAE52221BDEF67600262B93 /* AppDelegate.m */,
 				1BAE52241BDEF67600262B93 /* ViewController.h */,
 				1BAE52251BDEF67600262B93 /* ViewController.m */,
-				1BAE52271BDEF67600262B93 /* Main.storyboard */,
+				1B08DDB91BE19D79008F982A /* iPhone.storyboard */,
+				1BAE52271BDEF67600262B93 /* iPad.storyboard */,
 				1BAE522D1BDEF67600262B93 /* Assets.xcassets */,
 				1BAE522F1BDEF67600262B93 /* LaunchScreen.storyboard */,
 				1BAE52321BDEF67600262B93 /* Info.plist */,
@@ -359,6 +364,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 1BAE52121BDEF67600262B93;
 			productRefGroup = 1BAE521C1BDEF67600262B93 /* Products */;
@@ -379,7 +385,8 @@
 			files = (
 				1BAE52311BDEF67600262B93 /* LaunchScreen.storyboard in Resources */,
 				1BAE522E1BDEF67600262B93 /* Assets.xcassets in Resources */,
-				1BAE52291BDEF67600262B93 /* Main.storyboard in Resources */,
+				1BAE52291BDEF67600262B93 /* iPad.storyboard in Resources */,
+				1B08DDB71BE19D79008F982A /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,12 +509,23 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1BAE52271BDEF67600262B93 /* Main.storyboard */ = {
+		1B08DDB91BE19D79008F982A /* iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B08DDB81BE19D79008F982A /* Base */,
+				1B08DDBB1BE19D86008F982A /* pt-BR */,
+			);
+			name = iPhone.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1BAE52271BDEF67600262B93 /* iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1BAE52281BDEF67600262B93 /* Base */,
+				1B08DDAD1BE19C19008F982A /* pt-BR */,
 			);
-			name = Main.storyboard;
+			name = iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		1BAE522F1BDEF67600262B93 /* LaunchScreen.storyboard */ = {

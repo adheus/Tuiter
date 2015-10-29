@@ -29,10 +29,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtP-LL-46g" userLabel="SearchBar">
                                 <rect key="frame" x="0.0" y="716" width="768" height="110"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search it" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckn-3C-NSe" customClass="SearchTextField">
-                                        <rect key="frame" x="265" y="17" width="239" height="76"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search it" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckn-3C-NSe" customClass="SearchTextField">
+                                        <rect key="frame" x="224" y="17" width="320" height="76"/>
                                         <animations/>
-                                        <color key="textColor" red="0.36862745098039218" green="0.62352941176470589" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="hpL-uz-IDG"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.40784313725490196" green="0.40784313725490196" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="64"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="search"/>
                                         <connections>
@@ -43,10 +46,8 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ckn-3C-NSe" secondAttribute="trailing" constant="16" id="A1T-Wf-JuA"/>
-                                    <constraint firstItem="ckn-3C-NSe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rtP-LL-46g" secondAttribute="leading" constant="16" id="Ls2-js-GQh"/>
+                                    <constraint firstItem="ckn-3C-NSe" firstAttribute="centerX" secondItem="rtP-LL-46g" secondAttribute="centerX" id="44i-We-nwB"/>
                                     <constraint firstAttribute="height" constant="110" id="Lz8-gH-Fhj"/>
-                                    <constraint firstItem="ckn-3C-NSe" firstAttribute="centerX" secondItem="rtP-LL-46g" secondAttribute="centerX" id="Vna-kM-PcT"/>
                                     <constraint firstItem="ckn-3C-NSe" firstAttribute="centerY" secondItem="rtP-LL-46g" secondAttribute="centerY" id="hat-Vn-fk4"/>
                                 </constraints>
                             </view>
@@ -197,17 +198,24 @@
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="r4e-Zj-veV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4hE-vk-fP0"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rtP-LL-46g" secondAttribute="bottom" constant="198" id="57T-Lq-83S"/>
                             <constraint firstItem="r4e-Zj-veV" firstAttribute="top" relation="lessThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="165" id="BOo-9Z-CrU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rtP-LL-46g" secondAttribute="trailing" constant="-20" id="LNU-7w-E8I"/>
-                            <constraint firstItem="rtP-LL-46g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="M0z-Yj-tzL"/>
+                            <constraint firstItem="rtP-LL-46g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="HKp-KF-31C"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rtP-LL-46g" secondAttribute="bottom" constant="198" id="riM-Oi-K4Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rtP-LL-46g" secondAttribute="trailing" constant="-20" id="xLd-AV-BX8"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="recentSearchesTableView" destination="dJN-AF-SN1" id="rlR-Gu-cLd"/>
+                        <outlet property="recentSearchesView" destination="5VW-UJ-cPW" id="hBa-mr-uKJ"/>
+                        <outlet property="searchBar" destination="rtP-LL-46g" id="42W-qb-Sgt"/>
+                        <outlet property="searchBarBottomConstraint" destination="riM-Oi-K4Q" id="Irh-CM-SzB"/>
                         <outlet property="searchField" destination="ckn-3C-NSe" id="ruB-k6-fp4"/>
+                        <outlet property="searchFieldWidthConstraint" destination="hpL-uz-IDG" id="kRD-4N-EvU"/>
                         <outlet property="trendingNowTableView" destination="GbS-dU-8yC" id="DbT-tW-7hN"/>
+                        <outlet property="trendingNowView" destination="dua-by-TNB" id="16y-oq-ilW"/>
+                        <outlet property="twitterIcon" destination="r4e-Zj-veV" id="5tf-qh-RiX"/>
+                        <outlet property="twitterLogoTopConstraint" destination="BOo-9Z-CrU" id="C0z-rG-dEY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

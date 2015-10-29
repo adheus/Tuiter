@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem"; ObjectID = "CH9-8f-8lM"; */
+"CH9-8f-8lM.text" = "Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "JbE-Fg-AiQ"; */
+"JbE-Fg-AiQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Recent Searches"; ObjectID = "bb6-Ev-mrh"; */
+"bb6-Ev-mrh.text" = "Recent Searches";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gHB-GL-dTm"; */
+"gHB-GL-dTm.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Search it"; ObjectID = "itF-dD-Djy"; */
+"itF-dD-Djy.placeholder" = "Search it";
+
+/* Class = "UILabel"; text = "Trending Now"; ObjectID = "n65-Gn-yXg"; */
+"n65-Gn-yXg.text" = "Trending Now";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "xYJ-fz-9MN"; */
+"xYJ-fz-9MN.text" = "Label";

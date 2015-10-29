@@ -17,6 +17,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad )
+        self.currentStoryboard = @"iPad";
+    else
+        self.currentStoryboard = @"iPhone";
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:self.currentStoryboard bundle:nil];
+    
+    UIViewController *homeViewController = [storyboard instantiateInitialViewController];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = homeViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -42,6 +55,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
++(NSString *) currentStoryboard {
+    return ((AppDelegate*) [[UIApplication sharedApplication] delegate]).currentStoryboard;
 }
 
 #pragma mark - Core Data stack

@@ -12,6 +12,16 @@
 
 @property(nonatomic, weak) IBOutlet UITextField *searchField;
 
+@property(nonatomic, weak) IBOutlet NSLayoutConstraint *twitterLogoTopConstraint;
+@property(nonatomic, weak) IBOutlet NSLayoutConstraint *searchBarBottomConstraint;
+@property(nonatomic, weak) IBOutlet NSLayoutConstraint *searchFieldWidthConstraint;
+
+
+@property(nonatomic, weak) IBOutlet UIImageView *twitterIcon;
+
+@property(nonatomic, weak) IBOutlet UIView *searchBar;
+@property(nonatomic, weak) IBOutlet UIView *recentSearchesView;
+@property(nonatomic, weak) IBOutlet UIView *trendingNowView;
 
 @property(nonatomic, weak) IBOutlet UITableView *recentSearchesTableView;
 @property(nonatomic, weak) IBOutlet UITableView *trendingNowTableView;

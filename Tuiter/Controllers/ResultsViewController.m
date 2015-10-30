@@ -88,6 +88,7 @@
                                  ];
     if ( [vc respondsToSelector:@selector(popoverPresentationController)] ) {
         vc.popoverPresentationController.sourceView = sourceView;
+        vc.popoverPresentationController.sourceRect = CGRectMake(sourceView.frame.origin.x + sourceView.frame.size.width, sourceView.frame.origin.y + sourceView.frame.size.height/2, 0, 0);
     }
     [self presentViewController:vc animated:YES completion:nil];
 }

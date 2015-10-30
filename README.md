@@ -1,5 +1,8 @@
 # Tuiter
-App authentication only Twitter app example
+iOS Twitter with app-authentication-only example
+
+- Universal app (iPad and iPhone)
+- Supporting English and Portuguese
 
 
 

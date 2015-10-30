@@ -12,9 +12,14 @@
 		1B08DDA61BE03906008F982A /* SimpleItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDA51BE03906008F982A /* SimpleItemCell.m */; };
 		1B08DDA91BE03F32008F982A /* TwitterTrend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDA81BE03F32008F982A /* TwitterTrend.m */; };
 		1B08DDB71BE19D79008F982A /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B08DDB91BE19D79008F982A /* iPhone.storyboard */; };
+		1B08DDC11BE2DB3C008F982A /* HomeViewControllerIPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDC01BE2DB3C008F982A /* HomeViewControllerIPad.m */; };
+		1B08DDC41BE2DB5D008F982A /* HomeViewControllerIPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDC31BE2DB5D008F982A /* HomeViewControllerIPhone.m */; };
+		1B08DDC71BE2DB8E008F982A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDC61BE2DB8E008F982A /* HomeViewController.m */; };
+		1B08DDCA1BE2E3B4008F982A /* ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDC91BE2E3B4008F982A /* ColorUtils.m */; };
+		1B08DDCD1BE2E579008F982A /* ResultsViewControllerIPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B08DDCC1BE2E579008F982A /* ResultsViewControllerIPhone.m */; };
+		1B08DDD01BE2FBEC008F982A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B08DDD21BE2FBEC008F982A /* Localizable.strings */; };
 		1BAE52201BDEF67600262B93 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE521F1BDEF67600262B93 /* main.m */; };
 		1BAE52231BDEF67600262B93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE52221BDEF67600262B93 /* AppDelegate.m */; };
-		1BAE52261BDEF67600262B93 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE52251BDEF67600262B93 /* ViewController.m */; };
 		1BAE52291BDEF67600262B93 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BAE52271BDEF67600262B93 /* iPad.storyboard */; };
 		1BAE522C1BDEF67600262B93 /* Tuiter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BAE522A1BDEF67600262B93 /* Tuiter.xcdatamodeld */; };
 		1BAE522E1BDEF67600262B93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BAE522D1BDEF67600262B93 /* Assets.xcassets */; };
@@ -59,12 +64,22 @@
 		1B08DDAD1BE19C19008F982A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/iPad.strings"; sourceTree = "<group>"; };
 		1B08DDB81BE19D79008F982A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		1B08DDBB1BE19D86008F982A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/iPhone.strings"; sourceTree = "<group>"; };
+		1B08DDBF1BE2DB3C008F982A /* HomeViewControllerIPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewControllerIPad.h; path = Controllers/iPad/HomeViewControllerIPad.h; sourceTree = "<group>"; };
+		1B08DDC01BE2DB3C008F982A /* HomeViewControllerIPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewControllerIPad.m; path = Controllers/iPad/HomeViewControllerIPad.m; sourceTree = "<group>"; };
+		1B08DDC21BE2DB5D008F982A /* HomeViewControllerIPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewControllerIPhone.h; path = Controllers/iPhone/HomeViewControllerIPhone.h; sourceTree = "<group>"; };
+		1B08DDC31BE2DB5D008F982A /* HomeViewControllerIPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewControllerIPhone.m; path = Controllers/iPhone/HomeViewControllerIPhone.m; sourceTree = "<group>"; };
+		1B08DDC51BE2DB8E008F982A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = Controllers/HomeViewController.h; sourceTree = "<group>"; };
+		1B08DDC61BE2DB8E008F982A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = Controllers/HomeViewController.m; sourceTree = "<group>"; };
+		1B08DDC81BE2E3B4008F982A /* ColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorUtils.h; path = Utils/ColorUtils.h; sourceTree = "<group>"; };
+		1B08DDC91BE2E3B4008F982A /* ColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ColorUtils.m; path = Utils/ColorUtils.m; sourceTree = "<group>"; };
+		1B08DDCB1BE2E579008F982A /* ResultsViewControllerIPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsViewControllerIPhone.h; path = Controllers/iPhone/ResultsViewControllerIPhone.h; sourceTree = "<group>"; };
+		1B08DDCC1BE2E579008F982A /* ResultsViewControllerIPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsViewControllerIPhone.m; path = Controllers/iPhone/ResultsViewControllerIPhone.m; sourceTree = "<group>"; };
+		1B08DDD11BE2FBEC008F982A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1B08DDD31BE2FBF3008F982A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1BAE521B1BDEF67600262B93 /* Tuiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BAE521F1BDEF67600262B93 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BAE52211BDEF67600262B93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1BAE52221BDEF67600262B93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1BAE52241BDEF67600262B93 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1BAE52251BDEF67600262B93 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1BAE52281BDEF67600262B93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPad.storyboard; sourceTree = "<group>"; };
 		1BAE522B1BDEF67600262B93 /* Tuiter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tuiter.xcdatamodel; sourceTree = "<group>"; };
 		1BAE522D1BDEF67600262B93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +146,26 @@
 			name = DAO;
 			sourceTree = "<group>";
 		};
+		1B08DDBC1BE2D982008F982A /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				1B08DDC21BE2DB5D008F982A /* HomeViewControllerIPhone.h */,
+				1B08DDC31BE2DB5D008F982A /* HomeViewControllerIPhone.m */,
+				1B08DDCB1BE2E579008F982A /* ResultsViewControllerIPhone.h */,
+				1B08DDCC1BE2E579008F982A /* ResultsViewControllerIPhone.m */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		1B08DDBE1BE2D996008F982A /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				1B08DDBF1BE2DB3C008F982A /* HomeViewControllerIPad.h */,
+				1B08DDC01BE2DB3C008F982A /* HomeViewControllerIPad.m */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 		1BAE52121BDEF67600262B93 = {
 			isa = PBXGroup;
 			children = (
@@ -163,8 +198,6 @@
 				1BAE52541BDEFFC600262B93 /* Services */,
 				1BAE52211BDEF67600262B93 /* AppDelegate.h */,
 				1BAE52221BDEF67600262B93 /* AppDelegate.m */,
-				1BAE52241BDEF67600262B93 /* ViewController.h */,
-				1BAE52251BDEF67600262B93 /* ViewController.m */,
 				1B08DDB91BE19D79008F982A /* iPhone.storyboard */,
 				1BAE52271BDEF67600262B93 /* iPad.storyboard */,
 				1BAE522D1BDEF67600262B93 /* Assets.xcassets */,
@@ -172,6 +205,7 @@
 				1BAE52321BDEF67600262B93 /* Info.plist */,
 				1BAE522A1BDEF67600262B93 /* Tuiter.xcdatamodeld */,
 				1BAE521E1BDEF67600262B93 /* Supporting Files */,
+				1B08DDD21BE2FBEC008F982A /* Localizable.strings */,
 			);
 			path = Tuiter;
 			sourceTree = "<group>";
@@ -229,6 +263,8 @@
 		1BAE52651BDF1F0C00262B93 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1B08DDC81BE2E3B4008F982A /* ColorUtils.h */,
+				1B08DDC91BE2E3B4008F982A /* ColorUtils.m */,
 				1BAE52661BDF20D800262B93 /* UI */,
 			);
 			name = Utils;
@@ -252,8 +288,12 @@
 		1BAE526D1BDF2F8700262B93 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1B08DDC51BE2DB8E008F982A /* HomeViewController.h */,
+				1B08DDC61BE2DB8E008F982A /* HomeViewController.m */,
 				1BAE526E1BDF2FBD00262B93 /* ResultsViewController.h */,
 				1BAE526F1BDF2FBD00262B93 /* ResultsViewController.m */,
+				1B08DDBE1BE2D996008F982A /* iPad */,
+				1B08DDBC1BE2D982008F982A /* iPhone */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -383,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B08DDD01BE2FBEC008F982A /* Localizable.strings in Resources */,
 				1BAE52311BDEF67600262B93 /* LaunchScreen.storyboard in Resources */,
 				1BAE522E1BDEF67600262B93 /* Assets.xcassets in Resources */,
 				1BAE52291BDEF67600262B93 /* iPad.storyboard in Resources */,
@@ -459,15 +500,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B08DDCD1BE2E579008F982A /* ResultsViewControllerIPhone.m in Sources */,
 				1B08DDA61BE03906008F982A /* SimpleItemCell.m in Sources */,
 				1B08DDA31BE030A7008F982A /* SearchDAO.m in Sources */,
 				1BAE522C1BDEF67600262B93 /* Tuiter.xcdatamodeld in Sources */,
+				1B08DDCA1BE2E3B4008F982A /* ColorUtils.m in Sources */,
+				1B08DDC41BE2DB5D008F982A /* HomeViewControllerIPhone.m in Sources */,
 				1BAE525D1BDF0AB600262B93 /* AFTwitterSessionManager.m in Sources */,
 				1BAE52641BDF18D900262B93 /* TwitterUser.m in Sources */,
 				1B08DDA91BE03F32008F982A /* TwitterTrend.m in Sources */,
 				1BAE526C1BDF2F5100262B93 /* TwitterStatusCell.m in Sources */,
-				1BAE52261BDEF67600262B93 /* ViewController.m in Sources */,
+				1B08DDC71BE2DB8E008F982A /* HomeViewController.m in Sources */,
 				1BAE52701BDF2FBD00262B93 /* ResultsViewController.m in Sources */,
+				1B08DDC11BE2DB3C008F982A /* HomeViewControllerIPad.m in Sources */,
 				1BAE52691BDF20FF00262B93 /* SearchTextField.m in Sources */,
 				1BAE52611BDF18BC00262B93 /* TwitterStatus.m in Sources */,
 				1BAE52231BDEF67600262B93 /* AppDelegate.m in Sources */,
@@ -517,6 +562,15 @@
 			);
 			name = iPhone.storyboard;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		1B08DDD21BE2FBEC008F982A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B08DDD11BE2FBEC008F982A /* Base */,
+				1B08DDD31BE2FBF3008F982A /* pt-BR */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		1BAE52271BDEF67600262B93 /* iPad.storyboard */ = {

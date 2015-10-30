@@ -1,63 +1,35 @@
 //
-//  ResultsViewController.m
+//  ResultsViewControllerIPhone.m
 //  Tuiter
 //
-//  Created by Adheús Rangel on 10/27/15.
+//  Created by Adheús Rangel on 10/29/15.
 //  Copyright © 2015 Adheús Rangel. All rights reserved.
 //
 
-#import "ResultsViewController.h"
-#import "TwitterStatusCell.h"
+#import "ResultsViewControllerIPhone.h"
 #import "ColorUtils.h"
-@implementation ResultsViewController
+#import "TwitterStatusCell.h"
 
+@interface ResultsViewControllerIPhone ()
 
--(void)viewDidLoad {
+@end
+
+@implementation ResultsViewControllerIPhone
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-    self.navigationController.navigationBar.barTintColor = [ColorUtils lightBlue];
-    
-    
-    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"NavigationBarSearchButton"] style:UIBarButtonItemStylePlain target:self action:@selector(close)];
-    closeButton.tintColor = [UIColor whiteColor];
-    self.navigationItem.leftBarButtonItem = closeButton;
-
+    // Do any additional setup after loading the view.
 }
 
--(void)close {
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
-
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.results.count;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *statusTableViewCellIdentifier = @"TwitterStatusCell";
-    
-    TwitterStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:statusTableViewCellIdentifier];
-    
-    if (cell == nil) {
-        cell = [[TwitterStatusCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:statusTableViewCellIdentifier];
-    }
-    
-    cell.leftUtilityButtons = [self leftButtons];
-    cell.rightUtilityButtons = [self rightButtons];
-    cell.delegate = self;
-    
-    [cell setTwitterStatus:[self.results objectAtIndex:indexPath.row]];
-    
-    return cell;
-}
-
 
 - (NSArray *)leftButtons
 {
     NSMutableArray *leftUtilityButtons = [NSMutableArray new];
     
-    [leftUtilityButtons sw_addUtilityButtonWithColor:[ColorUtils lightBlue] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
-    [leftUtilityButtons sw_addUtilityButtonWithColor:[ColorUtils lightBlue] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
     [leftUtilityButtons sw_addUtilityButtonWithColor:[ColorUtils lightBlue] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
     [leftUtilityButtons sw_addUtilityButtonWithColor:[ColorUtils lightBlue] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
     
@@ -67,6 +39,9 @@
 - (NSArray *)rightButtons
 {
     NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    
+    [rightUtilityButtons sw_addUtilityButtonWithColor:[ColorUtils lightBlue] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:[ColorUtils lightBlue] normalIcon:[UIImage imageNamed:@"GenericButtonOff"] selectedIcon:[UIImage imageNamed:@"GenericButtonOn"]];
     
     return rightUtilityButtons;
 }
@@ -106,24 +81,43 @@
         case 1:
             NSLog(@"2 button was pressed");
             break;
-        case 2:
-            NSLog(@"3 button was pressed");
-            break;
-        case 3:
-            NSLog(@"4 button was pressed");
         default:
             break;
     }
 }
 
-// prevent multiple cells from showing utilty buttons simultaneously
-- (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell {
-    return YES;
+-(void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
+    ((UIButton *)[cell.rightUtilityButtons objectAtIndex:index]).selected = !((UIButton *)[cell.rightUtilityButtons objectAtIndex:index]).selected;
+    switch (index) {
+        case 0:
+            NSLog(@"3 button was pressed");
+            break;
+        case 1:
+            NSLog(@"4 button was pressed");
+            break;
+        default:
+            break;
+    }
+
 }
 
 // prevent cell(s) from displaying left/right utility buttons
 - (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state {
-    return state == kCellStateLeft;
+    return YES;
 }
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

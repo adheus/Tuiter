@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Tuiter
+
+  Created by Adheús Rangel on 10/29/15.
+  Copyright © 2015 Adheús Rangel. All rights reserved.
+*/
+
+"CONECTION_ERROR_TITLE" = "Erro";
+"CONECTION_ERROR_MESSAGE" = "Não foi possível completar esta ação no momento. Tente novamente.";
+"CONECTION_ERROR_BUTTON" = "Tudo bem :(";

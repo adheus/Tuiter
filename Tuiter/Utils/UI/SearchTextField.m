@@ -15,7 +15,10 @@
 
 -(void)awakeFromNib {
     self.leftViewMode = UITextFieldViewModeAlways;
-    self.leftView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SearchIcon"]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SearchIcon"]];
+    imageView.frame = CGRectMake(imageView.frame.origin.x, imageView.frame.origin.y, self.font.lineHeight, self.font.lineHeight);
+    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.leftView = imageView;
     [self setAttributedPlaceholder:[[NSAttributedString alloc] initWithString:self.placeholder attributes:@{NSForegroundColorAttributeName: PLACEHOLDER_COLOR}]];
     [super awakeFromNib];
 }

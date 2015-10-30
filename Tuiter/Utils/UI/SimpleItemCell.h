@@ -11,5 +11,4 @@
 @interface SimpleItemCell : UITableViewCell
 
 @property(nonatomic, weak) IBOutlet UILabel *title;
-
 @end

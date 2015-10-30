@@ -7,6 +7,7 @@
 //
 
 #import "SimpleItemCell.h"
+#import "ColorUtils.h"
 
 @implementation SimpleItemCell
 
@@ -18,5 +19,12 @@
     self.contentView.backgroundColor = [UIColor clearColor];
     self.backgroundColor = [UIColor clearColor];
 }
-
+-(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    
+    UIColor *newColor =  [ColorUtils darkGray];
+    if(highlighted)
+        newColor = [ColorUtils lightBlue];
+    
+    self.title.textColor = newColor;
+}
 @end

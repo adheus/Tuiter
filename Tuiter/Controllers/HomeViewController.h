@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TwitterServices.h"
-@interface ViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface HomeViewController : UIViewController <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, weak) IBOutlet UITextField *searchField;
 
@@ -30,6 +30,11 @@
 
 @property(nonatomic, retain) NSArray *lastSearchedTerms;
 @property(nonatomic, retain) NSArray *lastRequestedTrending;
+
+@property(nonatomic) BOOL isOnEditingMode;
+
+-(BOOL) isOnLandscape;
+
 
 @end
 
